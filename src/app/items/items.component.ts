@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item';
-import { ITEMS } from '../demo_items';
+import { ItemService } from '../item.service';
 
 // decorator that specifies the metadata for the component
 @Component({
@@ -10,17 +10,21 @@ import { ITEMS } from '../demo_items';
 })
 export class ItemsComponent implements OnInit {
 
-  items: Item[] = ITEMS;
+  items: Item[];
   selectedItem: Item;
 
+  constructor(private itemService: ItemService) {}
   // selects a single item and assigns it to selectedItem
   onSelect(item): void {
     this.selectedItem = item;
   }
 
-  constructor() { }
+  getItems(): void {
+    this.items = this.itemService.getItems();
+  }
 
   ngOnInit() {
+    this.getItems();
   }
 
 }
