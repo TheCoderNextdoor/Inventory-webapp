@@ -1,6 +1,10 @@
-<ul>
-    <li *ngFor='let item of items'>
-        <div>{{item.name | uppercase}}</div> 
-        <div>{{item.value}}</div>
+<ul class="items">
+    <li *ngFor='let item of items' (click)='onSelect(item)' [class.selected]='item === selectedItem'>
+        <div>
+            <span class="badge">{{item.id}}</span>
+            {{item.name | uppercase}} 
+            <span class="value">{{item.value}}</span>
+        </div>
     </li>    
 </ul>
+<app-item-details [item]='selectedItem'></app-item-details>

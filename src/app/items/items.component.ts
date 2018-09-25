@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item';
+import { ITEMS } from '../demo_items';
 
 // decorator that specifies the metadata for the component
 @Component({
@@ -9,18 +10,14 @@ import { Item } from '../item';
 })
 export class ItemsComponent implements OnInit {
 
-  items: Item[] = [
-    {
-      id: 1,
-      name: 'Laptop',
-      value: 25
-    },
-    {
-      id: 2,
-      name: 'Torch',
-      value: 2
-    }
-  ];
+  items: Item[] = ITEMS;
+  selectedItem: Item;
+
+  // selects a single item and assigns it to selectedItem
+  onSelect(item): void {
+    this.selectedItem = item;
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -1,10 +1,10 @@
 /* AppComponent's private CSS styles */
 div{
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(151, 204, 248);
 }
 h1 {
     font-size: 2em;
-    color: rgb(102, 101, 101);
+    color: rgb(11, 15, 48);
     margin-bottom: 1em;
 }
 label {
@@ -14,10 +14,7 @@ label {
     color: #607D8B;
     font-weight: bold;
 }
-p{
-    color: rgb(25, 36, 85);
-    font-weight: bold;
-}
+
   input {
     height: 2em;
     font-size: 1em;
