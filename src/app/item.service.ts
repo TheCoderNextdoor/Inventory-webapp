@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ITEMS } from './demo_items';
 import { Item } from './item';
 import { Observable, of } from 'rxjs';
+import { TransactionsService } from './transactions.service';
 
 @Injectable({
   // at the root level, Angular creates a single, shared instance
@@ -10,8 +11,9 @@ import { Observable, of } from 'rxjs';
 })
 export class ItemService {
 
-  constructor() { }
+  constructor(private transactionsService: TransactionsService) { }
   getItems(): Observable<Item[]> {
+    this.transactionsService.add('ItemService: Items fetched');
     return of(ITEMS);
   }
 }

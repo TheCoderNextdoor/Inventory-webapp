@@ -1,3 +1,8 @@
-<p>
-  transactions works!
-</p>
+<div *ngIf="transactionsService.messages.length">
+
+  <h2>Transactions</h2>
+  <button class="clear"
+          (click)="transactionsService.clear()">clear</button>
+  <div *ngFor='let message of transactionsService.messages'> {{message}} </div>
+
+</div>
