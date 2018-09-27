@@ -2,7 +2,10 @@
   <h1>{{ title }}</h1>
 </div>
 <div>
-  <app-items></app-items>
+  <nav>
+    <a routerLink="/items">Items</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
 <div>
   <app-transactions></app-transactions>
