@@ -1,7 +1,7 @@
 # This is the testing branch, all experiments are done here.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
-Check out the blog at [Web dev](https://webdevmean.wordpress.com (updated regularly)
+Check out the blog at [Web dev](https://webdevmean.wordpress.com) (updated regularly)
 
 ## Development server
 
