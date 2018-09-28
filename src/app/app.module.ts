@@ -6,13 +6,15 @@ import { ItemsComponent } from './items/items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsComponent,
     ItemDetailsComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
