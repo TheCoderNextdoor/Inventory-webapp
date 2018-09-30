@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes, Route } from '@angular/router';
 import { ItemsComponent } from './items/items.component';
 import { FavouritesComponent } from './favourites/favourites.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
   {path: 'items', component: ItemsComponent},
   {path: 'favourites', component: FavouritesComponent},
   {path: '', redirectTo: '/favourites', pathMatch: 'full'},
+  {path: 'detail/:id', component: ItemDetailsComponent}
 ];
 @NgModule({
   exports: [RouterModule],
