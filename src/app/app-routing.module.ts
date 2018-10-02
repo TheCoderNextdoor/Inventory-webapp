@@ -8,8 +8,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 const routes: Routes = [
   {path: 'items', component: ItemsComponent},
   {path: 'favourites', component: FavouritesComponent},
+  {path: 'details/:id', component: ItemDetailsComponent},
   {path: '', redirectTo: '/favourites', pathMatch: 'full'},
-  {path: 'detail/:id', component: ItemDetailsComponent}
 ];
 @NgModule({
   exports: [RouterModule],
