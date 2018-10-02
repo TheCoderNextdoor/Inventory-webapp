@@ -11,13 +11,13 @@ import { ItemService } from '../item.service';
 export class ItemsComponent implements OnInit {
 
   items: Item[];
-  selectedItem: Item;
+  // selectedItem: Item;
 
   constructor(private itemService: ItemService) {}
   // selects a single item and assigns it to selectedItem
-  onSelect(item): void {
-    this.selectedItem = item;
-  }
+  // onSelect(item): void {
+  //   this.selectedItem = item;
+  // }
 
   getItems(): void {
     this.itemService.getItems()
