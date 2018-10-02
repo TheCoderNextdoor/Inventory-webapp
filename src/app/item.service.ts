@@ -6,7 +6,7 @@ import { TransactionsService } from './transactions.service';
 
 @Injectable({
   // at the root level, Angular creates a single, shared instance
-  // of HeroService and injects into any class that asks for it.
+  // of ItemService and injects into any class that asks for it.
   providedIn: 'root'
 })
 export class ItemService {
@@ -15,5 +15,10 @@ export class ItemService {
   getItems(): Observable<Item[]> {
     this.transactionsService.add('ItemService: Items fetched');
     return of(ITEMS);
+  }
+
+  getItem(id: number): Observable<Item> {
+    this.transactionsService.add(`fetched item => id=${id}`);
+    return of(ITEMS.find(item => item.id === id));
   }
 }
